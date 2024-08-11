@@ -43,7 +43,7 @@ const verifyToken = async (req, res, next) => {
     if (err) {
       return res.status(401).send({ message: "unauthorized" });
     }
-    console.log("Value in the token", decoded);
+    // console.log("Value in the token", decoded);
     req.user = decoded;
     next();
   });
